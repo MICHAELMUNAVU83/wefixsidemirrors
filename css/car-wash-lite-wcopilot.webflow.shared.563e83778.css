@@ -2403,8 +2403,8 @@ blockquote {
     linear-gradient(#ffffff1a, #ffffff1a);
   border-bottom: 1px solid #fff6;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   position: fixed;
   inset: 0% 0% auto;
 }
@@ -2481,8 +2481,9 @@ blockquote {
 
 .nav-menu-wrapper {
   flex: 1;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+
   display: flex;
 }
 
@@ -2642,16 +2643,68 @@ blockquote {
 }
 
 .home-banner-section.home-3 {
-  background-color: #0000;
-  background-image: url("../images/65cf5b00965edebc2ce06425_Rectangle%201106%20%282%29.png");
-  background-position: 50% 0;
+  background-color: transparent;
+  background-image: url("../images/new_images/web.jpg");
+  background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   flex-direction: column;
   justify-content: center;
   padding-bottom: 80px;
 }
 
+/* Dark overlay for the section */
+.section-full {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-full::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+  z-index: 2;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Ensure content appears above the overlay */
+.base-container {
+  position: relative;
+  z-index: 3;
+}
+
+/* Make sure background video is positioned correctly */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* Dark overlay using ::before pseudo-element */
+.home-banner-section.home-3::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with 50% opacity */
+  z-index: 1;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Ensure content appears above the overlay */
+.home-banner-section.home-3 > * {
+  position: relative;
+  z-index: 2;
+}
 .primary-button {
   border: 1px solid var(--primary);
   background-color: var(--primary);
@@ -6122,7 +6175,6 @@ blockquote {
   }
 
   .menu-wrap {
-    background-color: #0f0f0f;
     flex-direction: column;
     align-items: flex-start;
     padding-top: 20px;
@@ -6210,20 +6262,6 @@ blockquote {
     padding-left: 20px;
     padding-right: 40px;
     overflow: auto;
-  }
-
-  .nav-menu {
-    background-color: #0f0f0f;
-    flex-direction: column;
-    width: 320px;
-    inset: 0% auto 0% 0%;
-  }
-
-  .nav-menu-wrapper {
-    border-style: none;
-    justify-content: space-between;
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .button-header {
