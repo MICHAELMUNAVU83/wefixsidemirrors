@@ -971,6 +971,7 @@
                     action="https://formspree.io/f/meozzoey"
                     method="POST"
                     class="form-footer"
+                    enctype="multipart/form-data"
                     data-wf-page-id="65cf5ae619569b5adbaecbc8"
                     data-wf-element-id="65379f15-2439-34a8-2bbc-0741d9fa072f"
                   >
@@ -985,108 +986,86 @@
                         id="Name"
                         required=""
                       />
-                      <div class="input-with-icon">
-                        <input
-                          class="input w-input"
-                          maxlength="256"
-                          name="Vehicle-type"
-                          data-name="Vehicle Type"
-                          placeholder="Vehicle make & model"
-                          type="text"
-                          id="Vehicle-type"
-                          required=""
-                        />
-                      </div>
-                    </div>
-                    <div class="field-wrapper">
                       <input
                         class="input w-input"
                         maxlength="256"
-                        name="Phone-number"
-                        data-name="Phone Number"
-                        placeholder="Phone number*"
-                        type="tel"
-                        id="Phone-number"
+                        name="Make-Model-Year"
+                        data-name="Make Model Year"
+                        placeholder="Make/Model/Year (e.g., Toyota Camry 2020)"
+                        type="text"
+                        id="Make-Model-Year"
                         required=""
                       />
-                      <div class="input-with-icon">
-                        <div class="icon-block">
-                          <img
-                            alt=""
-                            loading="lazy"
-                            src="images/65cf50f7145973fba916b0e0_calendar-03.png"
-                            class="icon-input"
-                          />
-                        </div>
-                        <select
-                          id="field-3"
-                          name="field-3"
-                          data-name="Field 3"
-                          required=""
-                          class="input pr w-select"
-                        >
-                          <option value="">Preferred service date</option>
-                          <option value="Today">Today</option>
-                          <option value="Tomorrow">Tomorrow</option>
-                          <option value="This Week">This Week</option>
-                          <option value="Next Week">Next Week</option>
-                        </select>
-                      </div>
                     </div>
+
                     <div class="field-wrapper">
                       <input
                         class="input w-input"
                         maxlength="256"
                         name="Email"
                         data-name="Email"
-                        placeholder="Email*"
+                        placeholder="Email"
                         type="email"
                         id="Email"
                         required=""
                       />
-                      <div class="input-with-icon">
-                        <select
-                          id="field"
-                          name="Service-needed"
-                          required=""
-                          class="input pr w-select"
-                        >
-                          <option value="">Service needed</option>
-                          <option value="Glass Replacement">
-                            Glass Replacement
-                          </option>
-                          <option value="Indicator Replacement">
-                            Indicator Replacement
-                          </option>
-                          <option value="Whole Unit Repair">
-                            Whole Unit Repair
-                          </option>
-                          <option value="Folding Motor">Folding Motor</option>
-                          <option value="Blindspot Light">
-                            Blindspot Light
-                          </option>
-                          <option value="Mirror Camera">Mirror Camera</option>
-                          <option value="Towing Mirror">Towing Mirror</option>
-                        </select>
-                        <div class="icon-block">
-                          <img
-                            alt=""
-                            loading="lazy"
-                            src="images/65cf50f7145973fba916b0e2_clock-01.png"
-                            class="icon-input"
-                          />
-                        </div>
-                      </div>
+                      <input
+                        class="input w-input"
+                        maxlength="256"
+                        name="Phone"
+                        data-name="Phone"
+                        placeholder="Phone Number"
+                        type="tel"
+                        id="Phone"
+                        required=""
+                      />
                     </div>
+
+                    <div class="field-wrapper">
+                      <select
+                        id="State"
+                        name="State"
+                        data-name="State"
+                        required=""
+                        class="input w-select"
+                      >
+                        <option value="">Select State</option>
+                        <option value="Australian Capital Territory">
+                          Australian Capital Territory
+                        </option>
+                        <option value="New South Wales">New South Wales</option>
+                        <option value="Northern Territory">
+                          Northern Territory
+                        </option>
+                        <option value="Queensland">Queensland</option>
+                        <option value="South Australia">South Australia</option>
+                        <option value="Tasmania">Tasmania</option>
+                        <option value="Victoria">Victoria</option>
+                        <option value="Western Australia">
+                          Western Australia
+                        </option>
+                      </select>
+                      <input
+                        class="input w-input"
+                        maxlength="256"
+                        name="Suburb"
+                        data-name="Suburb"
+                        placeholder="Suburb (optional)"
+                        type="text"
+                        id="Suburb"
+                      />
+                    </div>
+
                     <textarea
-                      id="Text-Area-2"
-                      name="Text-Area-2"
+                      id="Description"
+                      name="Description"
                       maxlength="5000"
-                      data-name="Text Area 2"
-                      placeholder="Describe the issue with your side mirror"
+                      data-name="Description"
+                      placeholder="Brief description of the issue"
                       required=""
                       class="input text-area w-input"
                     ></textarea>
+
                     <input
                       type="submit"
                       data-wait="Please wait..."
